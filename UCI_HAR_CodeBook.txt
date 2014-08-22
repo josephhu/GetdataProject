@@ -1,0 +1,324 @@
+ 		CODE BOOK - Data Dictionary for UCI_HAR_TidyData.txt
+
+-------------------------------------------------------------------------------------------------
+The file UCI_HAR_TidyData.txt contains the average (per 30 persons and 6 activities) 
+of 66 measures from the accelerometers of the Samsung Galaxy S smartphone. 
+
+A full description of the original data set is available at the site: 
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
+
+-------------------------------------------------------------------------------------------------
+
+The file UCI_HAR_TidyData.txt has 68 columns
+
+The first column "subject" identify which of the 30 volunteers was being studied.
+The second column "activity" identify which activity the subject was doing when the measurements were taken.
+
+Columns 3 through 68 represents the mean "-mean()" and standard deviation "-std()" of 33 signals:
+
+tBodyAcc-XYZ
+tGravityAcc-XYZ
+tBodyAccJerk-XYZ
+tBodyGyro-XYZ
+tBodyGyroJerk-XYZ
+tBodyAccMag
+tGravityAccMag
+tBodyAccJerkMag
+tBodyGyroMag
+tBodyGyroJerkMag
+fBodyAcc-XYZ
+fBodyAccJerk-XYZ
+fBodyGyro-XYZ
+fBodyAccMag
+fBodyAccJerkMag
+fBodyGyroMag
+fBodyGyroJerkMag
+
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+Prefix 't' denotes time domain signals.
+Prefix 'f' denotes frequency domain signals as Fast Fourier Transform (FFT) were performed on the signals.
+Acc is the abbreviation for accelerometer.
+Gyro is the abbreviation for gyroscope.
+Jerk - The body linear acceleration and angular velocity were derived in time to obtain Jerk signals.
+Mag - The magnitude of these three-dimensional signals were calculated using the Euclidean norm.
+
+* for detailed informaton of the measures, see 'features_info.txt' 
+
+-------------------------------------------------------------------------------------------------
+
+Detailed Description of the 68 columns follow.
+* for a simple listing of all measures and their corresponding column (from the origianl data set), see 'features.txt'
+
+
+ 
+ subject 
+	The subject id that represent the 30 volunteers being studied
+		Integer values - Its range is from 1 to 30
+
+ Activity 
+	The activity each subject was doing when the measurements were taken
+		The strings "WALKING", "WALKING_UPSTAIRS", "WALKING_DOWNSTAIRS", "SITTING", "STANDING", or "LAYING"
+
+ averageOf.tBodyAccMeanX 
+	The average (for each subject and each activity) of the original tBodyAcc-mean()-X values
+		Numeric value
+
+ averageOf.tBodyAccMeanY 
+	The average (for each subject and each activity) of the original tBodyAcc-mean()-Y values
+		Numeric value
+
+ averageOf.tBodyAccMeanZ 
+	The average (for each subject and each activity) of the original tBodyAcc-mean()-Z values
+		Numeric value
+
+ averageOf.tBodyAccStdX 
+	The average (for each subject and each activity) of the original tBodyAcc-std()-X values
+		Numeric value
+
+ averageOf.tBodyAccStdY 
+	The average (for each subject and each activity) of the original tBodyAcc-std()-Y values
+		Numeric value
+
+ averageOf.tBodyAccStdZ 
+	The average (for each subject and each activity) of the original tBodyAcc-std()-Z values
+		Numeric value
+
+ averageOf.tGravityAccMeanX 
+	The average (for each subject and each activity) of the original tGravityAcc-mean()-X values
+		Numeric value
+
+ averageOf.tGravityAccMeanY 
+	The average (for each subject and each activity) of the original tGravityAcc-mean()-Y values
+		Numeric value
+
+ averageOf.tGravityAccMeanZ 
+	The average (for each subject and each activity) of the original tGravityAcc-mean()-Z values
+		Numeric value
+
+ averageOf.tGravityAccStdX 
+	The average (for each subject and each activity) of the original tGravityAcc-std()-X values
+		Numeric value
+
+ averageOf.tGravityAccStdY 
+	The average (for each subject and each activity) of the original tGravityAcc-std()-Y values
+		Numeric value
+
+ averageOf.tGravityAccStdZ 
+	The average (for each subject and each activity) of the original tGravityAcc-std()-Z values
+		Numeric value
+
+ averageOf.tBodyAccJerkMeanX 
+	The average (for each subject and each activity) of the original tBodyAccJerk-mean()-X values
+		Numeric value
+
+ averageOf.tBodyAccJerkMeanY 
+	The average (for each subject and each activity) of the original tBodyAccJerk-mean()-Y values
+		Numeric value
+
+ averageOf.tBodyAccJerkMeanZ 
+	The average (for each subject and each activity) of the original tBodyAccJerk-mean()-Z values
+		Numeric value
+
+ averageOf.tBodyAccJerkStdX 
+	The average (for each subject and each activity) of the original tBodyAccJerk-std()-X values
+		Numeric value
+
+ averageOf.tBodyAccJerkStdY 
+	The average (for each subject and each activity) of the original tBodyAccJerk-std()-Y values
+		Numeric value
+
+ averageOf.tBodyAccJerkStdZ 
+	The average (for each subject and each activity) of the original tBodyAccJerk-std()-Z values
+		Numeric value
+
+ averageOf.tBodyGyroMeanX 
+	The average (for each subject and each activity) of the original tBodyGyro-mean()-X values
+		Numeric value
+
+ averageOf.tBodyGyroMeanY 
+	The average (for each subject and each activity) of the original tBodyGyro-mean()-Y values
+		Numeric value
+
+ averageOf.tBodyGyroMeanZ 
+	The average (for each subject and each activity) of the original tBodyGyro-mean()-Z values
+		Numeric value
+
+ averageOf.tBodyGyroStdX 
+	The average (for each subject and each activity) of the original tBodyGyro-std()-X values
+		Numeric value
+
+ averageOf.tBodyGyroStdY 
+	The average (for each subject and each activity) of the original tBodyGyro-std()-Y values
+		Numeric value
+
+ averageOf.tBodyGyroStdZ 
+	The average (for each subject and each activity) of the original tBodyGyro-std()-Z values
+		Numeric value
+
+ averageOf.tBodyGyroJerkMeanX 
+	The average (for each subject and each activity) of the original tBodyGyroJerk-mean()-X values
+		Numeric value
+
+ averageOf.tBodyGyroJerkMeanY 
+	The average (for each subject and each activity) of the original tBodyGyroJerk-mean()-Y values
+		Numeric value
+
+ averageOf.tBodyGyroJerkMeanZ 
+	The average (for each subject and each activity) of the original tBodyGyroJerk-mean()-Z values
+		Numeric value
+
+ averageOf.tBodyGyroJerkStdX 
+	The average (for each subject and each activity) of the original tBodyGyroJerk-std()-X values
+		Numeric value
+
+ averageOf.tBodyGyroJerkStdY 
+	The average (for each subject and each activity) of the original tBodyGyroJerk-std()-Y values
+		Numeric value
+
+ averageOf.tBodyGyroJerkStdZ 
+	The average (for each subject and each activity) of the original tBodyGyroJerk-std()-Z values
+		Numeric value
+
+ averageOf.tBodyAccMagMean 
+	The average (for each subject and each activity) of the original tBodyAccMag-mean() values
+		Numeric value
+
+ averageOf.tBodyAccMagStd 
+	The average (for each subject and each activity) of the original tBodyAccMag-std() values
+		Numeric value
+
+ averageOf.tGravityAccMagMean 
+	The average (for each subject and each activity) of the original tGravityAccMag-mean() values
+		Numeric value
+
+ averageOf.tGravityAccMagStd 
+	The average (for each subject and each activity) of the original tGravityAccMag-std() values
+		Numeric value
+
+ averageOf.tBodyAccJerkMagMean 
+	The average (for each subject and each activity) of the original tBodyAccJerkMag-mean() values
+		Numeric value
+
+ averageOf.tBodyAccJerkMagStd 
+	The average (for each subject and each activity) of the original tBodyAccJerkMag-std() values
+		Numeric value
+
+ averageOf.tBodyGyroMagMean 
+	The average (for each subject and each activity) of the original tBodyGyroMag-mean() values
+		Numeric value
+
+ averageOf.tBodyGyroMagStd 
+	The average (for each subject and each activity) of the original tBodyGyroMag-std() values
+		Numeric value
+
+ averageOf.tBodyGyroJerkMagMean 
+	The average (for each subject and each activity) of the original tBodyGyroJerkMag-mean() values
+		Numeric value
+
+ averageOf.tBodyGyroJerkMagStd 
+	The average (for each subject and each activity) of the original tBodyGyroJerkMag-std() values
+		Numeric value
+
+ averageOf.fBodyAccMeanX 
+	The average (for each subject and each activity) of the original fBodyAcc-mean()-X values
+		Numeric value
+
+ averageOf.fBodyAccMeanY 
+	The average (for each subject and each activity) of the original fBodyAcc-mean()-Y values
+		Numeric value
+
+ averageOf.fBodyAccMeanZ 
+	The average (for each subject and each activity) of the original fBodyAcc-mean()-Z values
+		Numeric value
+
+ averageOf.fBodyAccStdX 
+	The average (for each subject and each activity) of the original fBodyAcc-std()-X values
+		Numeric value
+
+ averageOf.fBodyAccStdY 
+	The average (for each subject and each activity) of the original fBodyAcc-std()-Y values
+		Numeric value
+
+ averageOf.fBodyAccStdZ 
+	The average (for each subject and each activity) of the original fBodyAcc-std()-Z values
+		Numeric value
+
+ averageOf.fBodyAccJerkMeanX 
+	The average (for each subject and each activity) of the original fBodyAccJerk-mean()-X values
+		Numeric value
+
+ averageOf.fBodyAccJerkMeanY 
+	The average (for each subject and each activity) of the original fBodyAccJerk-mean()-Y values
+		Numeric value
+
+ averageOf.fBodyAccJerkMeanZ 
+	The average (for each subject and each activity) of the original fBodyAccJerk-mean()-Z values
+		Numeric value
+
+ averageOf.fBodyAccJerkStdX 
+	The average (for each subject and each activity) of the original fBodyAccJerk-std()-X values
+		Numeric value
+
+ averageOf.fBodyAccJerkStdY 
+	The average (for each subject and each activity) of the original fBodyAccJerk-std()-Y values
+		Numeric value
+
+ averageOf.fBodyAccJerkStdZ 
+	The average (for each subject and each activity) of the original fBodyAccJerk-std()-Z values
+		Numeric value
+
+ averageOf.fBodyGyroMeanX 
+	The average (for each subject and each activity) of the original fBodyGyro-mean()-X values
+		Numeric value
+
+ averageOf.fBodyGyroMeanY 
+	The average (for each subject and each activity) of the original fBodyGyro-mean()-Y values
+		Numeric value
+
+ averageOf.fBodyGyroMeanZ 
+	The average (for each subject and each activity) of the original fBodyGyro-mean()-Z values
+		Numeric value
+
+ averageOf.fBodyGyroStdX 
+	The average (for each subject and each activity) of the original fBodyGyro-std()-X values
+		Numeric value
+
+ averageOf.fBodyGyroStdY 
+	The average (for each subject and each activity) of the original fBodyGyro-std()-Y values
+		Numeric value
+
+ averageOf.fBodyGyroStdZ 
+	The average (for each subject and each activity) of the original fBodyGyro-std()-Z values
+		Numeric value
+
+ averageOf.fBodyAccMagMean 
+	The average (for each subject and each activity) of the original fBodyAccMag-mean() values
+		Numeric value
+
+ averageOf.fBodyAccMagStd 
+	The average (for each subject and each activity) of the original fBodyAccMag-std() values
+		Numeric value
+
+ averageOf.fBodyBodyAccJerkMagMean 
+	The average (for each subject and each activity) of the original fBodyBodyAccJerkMag-mean() values
+		Numeric value
+
+ averageOf.fBodyBodyAccJerkMagStd 
+	The average (for each subject and each activity) of the original fBodyBodyAccJerkMag-std() values
+		Numeric value
+
+ averageOf.fBodyBodyGyroMagMean 
+	The average (for each subject and each activity) of the original fBodyBodyGyroMag-mean() values
+		Numeric value
+
+ averageOf.fBodyBodyGyroMagStd 
+	The average (for each subject and each activity) of the original fBodyBodyGyroMag-std() values
+		Numeric value
+
+ averageOf.fBodyBodyGyroJerkMagMean 
+	The average (for each subject and each activity) of the original fBodyBodyGyroJerkMag-mean() values
+		Numeric value
+
+ averageOf.fBodyBodyGyroJerkMagStd 
+	The average (for each subject and each activity) of the original fBodyBodyGyroJerkMag-std() values
+		Numeric value
