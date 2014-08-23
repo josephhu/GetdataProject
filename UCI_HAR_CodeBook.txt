@@ -14,29 +14,32 @@ The file UCI_HAR_TidyData.txt has 68 columns
 The first column "subject" identify which of the 30 volunteers was being studied.
 The second column "activity" identify which activity the subject was doing when the measurements were taken.
 
-Columns 3 through 68 represents the mean "-mean()" and standard deviation "-std()" of 33 signals:
+Columns 3 through 68 represent the Mean and Standard Deviation values of 33 signals:
 
-tBodyAcc-XYZ
-tGravityAcc-XYZ
-tBodyAccJerk-XYZ
-tBodyGyro-XYZ
-tBodyGyroJerk-XYZ
+tBodyAcc[XYZ]
+tGravityAcc[XYZ]
+tBodyAccJerk[XYZ]
+tBodyGyro[XYZ]
+tBodyGyroJerk[XYZ]
 tBodyAccMag
 tGravityAccMag
 tBodyAccJerkMag
 tBodyGyroMag
 tBodyGyroJerkMag
-fBodyAcc-XYZ
-fBodyAccJerk-XYZ
-fBodyGyro-XYZ
+fBodyAcc[XYZ]
+fBodyAccJerk[XYZ]
+fBodyGyro[XYZ]
 fBodyAccMag
 fBodyAccJerkMag
 fBodyGyroMag
 fBodyGyroJerkMag
 
-'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+Mean is the abbreviation for maen value.
+Std is the abbreviation for Standard Deviation value.
+
+'[XYZ]' is used to denote 3-axial signals in the X, Y and Z directions.
 Prefix 't' denotes time domain signals.
-Prefix 'f' denotes frequency domain signals as Fast Fourier Transform (FFT) were performed on the signals.
+Prefix 'f' denotes frequency domain signals as Fast Fourier Transform (FFT) was performed on the signals.
 Acc is the abbreviation for accelerometer.
 Gyro is the abbreviation for gyroscope.
 Jerk - The body linear acceleration and angular velocity were derived in time to obtain Jerk signals.
@@ -51,274 +54,275 @@ Detailed Description of the 68 columns follow.
 
 
  
- subject 
+subject 
 	The subject id that represent the 30 volunteers being studied
 		Integer values - Its range is from 1 to 30
 
- Activity 
+activity 
 	The activity each subject was doing when the measurements were taken
 		The strings "WALKING", "WALKING_UPSTAIRS", "WALKING_DOWNSTAIRS", "SITTING", "STANDING", or "LAYING"
 
- averageOf.tBodyAccMeanX 
-	The average (for each subject and each activity) of the original tBodyAcc-mean()-X values
-		Numeric value
-
- averageOf.tBodyAccMeanY 
-	The average (for each subject and each activity) of the original tBodyAcc-mean()-Y values
-		Numeric value
-
- averageOf.tBodyAccMeanZ 
-	The average (for each subject and each activity) of the original tBodyAcc-mean()-Z values
-		Numeric value
-
- averageOf.tBodyAccStdX 
-	The average (for each subject and each activity) of the original tBodyAcc-std()-X values
-		Numeric value
-
- averageOf.tBodyAccStdY 
-	The average (for each subject and each activity) of the original tBodyAcc-std()-Y values
-		Numeric value
-
- averageOf.tBodyAccStdZ 
-	The average (for each subject and each activity) of the original tBodyAcc-std()-Z values
-		Numeric value
-
- averageOf.tGravityAccMeanX 
-	The average (for each subject and each activity) of the original tGravityAcc-mean()-X values
-		Numeric value
-
- averageOf.tGravityAccMeanY 
-	The average (for each subject and each activity) of the original tGravityAcc-mean()-Y values
-		Numeric value
-
- averageOf.tGravityAccMeanZ 
-	The average (for each subject and each activity) of the original tGravityAcc-mean()-Z values
-		Numeric value
-
- averageOf.tGravityAccStdX 
-	The average (for each subject and each activity) of the original tGravityAcc-std()-X values
-		Numeric value
-
- averageOf.tGravityAccStdY 
-	The average (for each subject and each activity) of the original tGravityAcc-std()-Y values
-		Numeric value
-
- averageOf.tGravityAccStdZ 
-	The average (for each subject and each activity) of the original tGravityAcc-std()-Z values
-		Numeric value
-
- averageOf.tBodyAccJerkMeanX 
-	The average (for each subject and each activity) of the original tBodyAccJerk-mean()-X values
-		Numeric value
-
- averageOf.tBodyAccJerkMeanY 
-	The average (for each subject and each activity) of the original tBodyAccJerk-mean()-Y values
-		Numeric value
-
- averageOf.tBodyAccJerkMeanZ 
-	The average (for each subject and each activity) of the original tBodyAccJerk-mean()-Z values
-		Numeric value
-
- averageOf.tBodyAccJerkStdX 
-	The average (for each subject and each activity) of the original tBodyAccJerk-std()-X values
-		Numeric value
-
- averageOf.tBodyAccJerkStdY 
-	The average (for each subject and each activity) of the original tBodyAccJerk-std()-Y values
-		Numeric value
-
- averageOf.tBodyAccJerkStdZ 
-	The average (for each subject and each activity) of the original tBodyAccJerk-std()-Z values
-		Numeric value
-
- averageOf.tBodyGyroMeanX 
-	The average (for each subject and each activity) of the original tBodyGyro-mean()-X values
-		Numeric value
-
- averageOf.tBodyGyroMeanY 
-	The average (for each subject and each activity) of the original tBodyGyro-mean()-Y values
-		Numeric value
-
- averageOf.tBodyGyroMeanZ 
-	The average (for each subject and each activity) of the original tBodyGyro-mean()-Z values
-		Numeric value
-
- averageOf.tBodyGyroStdX 
-	The average (for each subject and each activity) of the original tBodyGyro-std()-X values
-		Numeric value
-
- averageOf.tBodyGyroStdY 
-	The average (for each subject and each activity) of the original tBodyGyro-std()-Y values
-		Numeric value
-
- averageOf.tBodyGyroStdZ 
-	The average (for each subject and each activity) of the original tBodyGyro-std()-Z values
-		Numeric value
-
- averageOf.tBodyGyroJerkMeanX 
-	The average (for each subject and each activity) of the original tBodyGyroJerk-mean()-X values
-		Numeric value
-
- averageOf.tBodyGyroJerkMeanY 
-	The average (for each subject and each activity) of the original tBodyGyroJerk-mean()-Y values
-		Numeric value
-
- averageOf.tBodyGyroJerkMeanZ 
-	The average (for each subject and each activity) of the original tBodyGyroJerk-mean()-Z values
-		Numeric value
-
- averageOf.tBodyGyroJerkStdX 
-	The average (for each subject and each activity) of the original tBodyGyroJerk-std()-X values
-		Numeric value
-
- averageOf.tBodyGyroJerkStdY 
-	The average (for each subject and each activity) of the original tBodyGyroJerk-std()-Y values
-		Numeric value
-
- averageOf.tBodyGyroJerkStdZ 
-	The average (for each subject and each activity) of the original tBodyGyroJerk-std()-Z values
-		Numeric value
-
- averageOf.tBodyAccMagMean 
-	The average (for each subject and each activity) of the original tBodyAccMag-mean() values
-		Numeric value
-
- averageOf.tBodyAccMagStd 
-	The average (for each subject and each activity) of the original tBodyAccMag-std() values
-		Numeric value
-
- averageOf.tGravityAccMagMean 
-	The average (for each subject and each activity) of the original tGravityAccMag-mean() values
-		Numeric value
-
- averageOf.tGravityAccMagStd 
-	The average (for each subject and each activity) of the original tGravityAccMag-std() values
-		Numeric value
-
- averageOf.tBodyAccJerkMagMean 
-	The average (for each subject and each activity) of the original tBodyAccJerkMag-mean() values
-		Numeric value
-
- averageOf.tBodyAccJerkMagStd 
-	The average (for each subject and each activity) of the original tBodyAccJerkMag-std() values
-		Numeric value
-
- averageOf.tBodyGyroMagMean 
-	The average (for each subject and each activity) of the original tBodyGyroMag-mean() values
-		Numeric value
-
- averageOf.tBodyGyroMagStd 
-	The average (for each subject and each activity) of the original tBodyGyroMag-std() values
-		Numeric value
-
- averageOf.tBodyGyroJerkMagMean 
-	The average (for each subject and each activity) of the original tBodyGyroJerkMag-mean() values
-		Numeric value
-
- averageOf.tBodyGyroJerkMagStd 
-	The average (for each subject and each activity) of the original tBodyGyroJerkMag-std() values
-		Numeric value
-
- averageOf.fBodyAccMeanX 
-	The average (for each subject and each activity) of the original fBodyAcc-mean()-X values
-		Numeric value
-
- averageOf.fBodyAccMeanY 
-	The average (for each subject and each activity) of the original fBodyAcc-mean()-Y values
-		Numeric value
-
- averageOf.fBodyAccMeanZ 
-	The average (for each subject and each activity) of the original fBodyAcc-mean()-Z values
-		Numeric value
-
- averageOf.fBodyAccStdX 
-	The average (for each subject and each activity) of the original fBodyAcc-std()-X values
-		Numeric value
-
- averageOf.fBodyAccStdY 
-	The average (for each subject and each activity) of the original fBodyAcc-std()-Y values
-		Numeric value
-
- averageOf.fBodyAccStdZ 
-	The average (for each subject and each activity) of the original fBodyAcc-std()-Z values
-		Numeric value
-
- averageOf.fBodyAccJerkMeanX 
-	The average (for each subject and each activity) of the original fBodyAccJerk-mean()-X values
-		Numeric value
-
- averageOf.fBodyAccJerkMeanY 
-	The average (for each subject and each activity) of the original fBodyAccJerk-mean()-Y values
-		Numeric value
-
- averageOf.fBodyAccJerkMeanZ 
-	The average (for each subject and each activity) of the original fBodyAccJerk-mean()-Z values
-		Numeric value
-
- averageOf.fBodyAccJerkStdX 
-	The average (for each subject and each activity) of the original fBodyAccJerk-std()-X values
-		Numeric value
-
- averageOf.fBodyAccJerkStdY 
-	The average (for each subject and each activity) of the original fBodyAccJerk-std()-Y values
-		Numeric value
-
- averageOf.fBodyAccJerkStdZ 
-	The average (for each subject and each activity) of the original fBodyAccJerk-std()-Z values
-		Numeric value
-
- averageOf.fBodyGyroMeanX 
-	The average (for each subject and each activity) of the original fBodyGyro-mean()-X values
-		Numeric value
-
- averageOf.fBodyGyroMeanY 
-	The average (for each subject and each activity) of the original fBodyGyro-mean()-Y values
-		Numeric value
-
- averageOf.fBodyGyroMeanZ 
-	The average (for each subject and each activity) of the original fBodyGyro-mean()-Z values
-		Numeric value
-
- averageOf.fBodyGyroStdX 
-	The average (for each subject and each activity) of the original fBodyGyro-std()-X values
-		Numeric value
-
- averageOf.fBodyGyroStdY 
-	The average (for each subject and each activity) of the original fBodyGyro-std()-Y values
-		Numeric value
-
- averageOf.fBodyGyroStdZ 
-	The average (for each subject and each activity) of the original fBodyGyro-std()-Z values
-		Numeric value
-
- averageOf.fBodyAccMagMean 
-	The average (for each subject and each activity) of the original fBodyAccMag-mean() values
-		Numeric value
-
- averageOf.fBodyAccMagStd 
-	The average (for each subject and each activity) of the original fBodyAccMag-std() values
-		Numeric value
-
- averageOf.fBodyBodyAccJerkMagMean 
-	The average (for each subject and each activity) of the original fBodyBodyAccJerkMag-mean() values
-		Numeric value
-
- averageOf.fBodyBodyAccJerkMagStd 
-	The average (for each subject and each activity) of the original fBodyBodyAccJerkMag-std() values
-		Numeric value
-
- averageOf.fBodyBodyGyroMagMean 
-	The average (for each subject and each activity) of the original fBodyBodyGyroMag-mean() values
-		Numeric value
-
- averageOf.fBodyBodyGyroMagStd 
-	The average (for each subject and each activity) of the original fBodyBodyGyroMag-std() values
-		Numeric value
-
- averageOf.fBodyBodyGyroJerkMagMean 
-	The average (for each subject and each activity) of the original fBodyBodyGyroJerkMag-mean() values
-		Numeric value
-
- averageOf.fBodyBodyGyroJerkMagStd 
-	The average (for each subject and each activity) of the original fBodyBodyGyroJerkMag-std() values
-		Numeric value
+averageOf.tBodyAccMeanX 
+ 	The average (for each subject and each activity) of the original tBodyAcc-mean()-X values
+ 		Numeric value in standard gravity units 'g' 
+
+averageOf.tBodyAccMeanY 
+ 	The average (for each subject and each activity) of the original tBodyAcc-mean()-Y values
+ 		Numeric value in standard gravity units 'g' 
+
+averageOf.tBodyAccMeanZ 
+ 	The average (for each subject and each activity) of the original tBodyAcc-mean()-Z values
+ 		Numeric value in standard gravity units 'g' 
+
+averageOf.tBodyAccStdX 
+ 	The average (for each subject and each activity) of the original tBodyAcc-std()-X values
+ 		Numeric value in standard gravity units 'g' 
+
+averageOf.tBodyAccStdY 
+ 	The average (for each subject and each activity) of the original tBodyAcc-std()-Y values
+ 		Numeric value in standard gravity units 'g' 
+
+averageOf.tBodyAccStdZ 
+ 	The average (for each subject and each activity) of the original tBodyAcc-std()-Z values
+ 		Numeric value in standard gravity units 'g' 
+
+averageOf.tGravityAccMeanX 
+ 	The average (for each subject and each activity) of the original tGravityAcc-mean()-X values
+ 		Numeric value in standard gravity units 'g' 
+
+averageOf.tGravityAccMeanY 
+ 	The average (for each subject and each activity) of the original tGravityAcc-mean()-Y values
+ 		Numeric value in standard gravity units 'g' 
+
+averageOf.tGravityAccMeanZ 
+ 	The average (for each subject and each activity) of the original tGravityAcc-mean()-Z values
+ 		Numeric value in standard gravity units 'g' 
+
+averageOf.tGravityAccStdX 
+ 	The average (for each subject and each activity) of the original tGravityAcc-std()-X values
+ 		Numeric value in standard gravity units 'g' 
+
+averageOf.tGravityAccStdY 
+ 	The average (for each subject and each activity) of the original tGravityAcc-std()-Y values
+ 		Numeric value in standard gravity units 'g' 
+
+averageOf.tGravityAccStdZ 
+ 	The average (for each subject and each activity) of the original tGravityAcc-std()-Z values
+ 		Numeric value in standard gravity units 'g' 
+
+averageOf.tBodyAccJerkMeanX 
+ 	The average (for each subject and each activity) of the original tBodyAccJerk-mean()-X values
+ 		Numeric value in standard gravity units 'g' 
+
+averageOf.tBodyAccJerkMeanY 
+ 	The average (for each subject and each activity) of the original tBodyAccJerk-mean()-Y values
+ 		Numeric value in standard gravity units 'g' 
+
+averageOf.tBodyAccJerkMeanZ 
+ 	The average (for each subject and each activity) of the original tBodyAccJerk-mean()-Z values
+ 		Numeric value in standard gravity units 'g' 
+
+averageOf.tBodyAccJerkStdX 
+ 	The average (for each subject and each activity) of the original tBodyAccJerk-std()-X values
+ 		Numeric value in standard gravity units 'g' 
+
+averageOf.tBodyAccJerkStdY 
+ 	The average (for each subject and each activity) of the original tBodyAccJerk-std()-Y values
+ 		Numeric value in standard gravity units 'g' 
+
+averageOf.tBodyAccJerkStdZ 
+ 	The average (for each subject and each activity) of the original tBodyAccJerk-std()-Z values
+ 		Numeric value in standard gravity units 'g' 
+
+averageOf.tBodyGyroMeanX 
+ 	The average (for each subject and each activity) of the original tBodyGyro-mean()-X values
+ 		Numeric value in units of radians/second for angular velocity 
+
+averageOf.tBodyGyroMeanY 
+ 	The average (for each subject and each activity) of the original tBodyGyro-mean()-Y values
+ 		Numeric value in units of radians/second for angular velocity 
+
+averageOf.tBodyGyroMeanZ 
+ 	The average (for each subject and each activity) of the original tBodyGyro-mean()-Z values
+ 		Numeric value in units of radians/second for angular velocity 
+
+averageOf.tBodyGyroStdX 
+ 	The average (for each subject and each activity) of the original tBodyGyro-std()-X values
+ 		Numeric value in units of radians/second for angular velocity 
+
+averageOf.tBodyGyroStdY 
+ 	The average (for each subject and each activity) of the original tBodyGyro-std()-Y values
+ 		Numeric value in units of radians/second for angular velocity 
+
+averageOf.tBodyGyroStdZ 
+ 	The average (for each subject and each activity) of the original tBodyGyro-std()-Z values
+ 		Numeric value in units of radians/second for angular velocity 
+
+averageOf.tBodyGyroJerkMeanX 
+ 	The average (for each subject and each activity) of the original tBodyGyroJerk-mean()-X values
+ 		Numeric value in units of radians/second for angular velocity 
+
+averageOf.tBodyGyroJerkMeanY 
+ 	The average (for each subject and each activity) of the original tBodyGyroJerk-mean()-Y values
+ 		Numeric value in units of radians/second for angular velocity 
+
+averageOf.tBodyGyroJerkMeanZ 
+ 	The average (for each subject and each activity) of the original tBodyGyroJerk-mean()-Z values
+ 		Numeric value in units of radians/second for angular velocity 
+
+averageOf.tBodyGyroJerkStdX 
+ 	The average (for each subject and each activity) of the original tBodyGyroJerk-std()-X values
+ 		Numeric value in units of radians/second for angular velocity 
+
+averageOf.tBodyGyroJerkStdY 
+ 	The average (for each subject and each activity) of the original tBodyGyroJerk-std()-Y values
+ 		Numeric value in units of radians/second for angular velocity 
+
+averageOf.tBodyGyroJerkStdZ 
+ 	The average (for each subject and each activity) of the original tBodyGyroJerk-std()-Z values
+ 		Numeric value in units of radians/second for angular velocity 
+
+averageOf.tBodyAccMagMean 
+ 	The average (for each subject and each activity) of the original tBodyAccMag-mean() values
+ 		Numeric value in standard gravity units 'g' 
+
+averageOf.tBodyAccMagStd 
+ 	The average (for each subject and each activity) of the original tBodyAccMag-std() values
+ 		Numeric value in standard gravity units 'g' 
+
+averageOf.tGravityAccMagMean 
+ 	The average (for each subject and each activity) of the original tGravityAccMag-mean() values
+ 		Numeric value in standard gravity units 'g' 
+
+averageOf.tGravityAccMagStd 
+ 	The average (for each subject and each activity) of the original tGravityAccMag-std() values
+ 		Numeric value in standard gravity units 'g' 
+
+averageOf.tBodyAccJerkMagMean 
+ 	The average (for each subject and each activity) of the original tBodyAccJerkMag-mean() values
+ 		Numeric value in standard gravity units 'g' 
+
+averageOf.tBodyAccJerkMagStd 
+ 	The average (for each subject and each activity) of the original tBodyAccJerkMag-std() values
+ 		Numeric value in standard gravity units 'g' 
+
+averageOf.tBodyGyroMagMean 
+ 	The average (for each subject and each activity) of the original tBodyGyroMag-mean() values
+ 		Numeric value in units of radians/second for angular velocity 
+
+averageOf.tBodyGyroMagStd 
+ 	The average (for each subject and each activity) of the original tBodyGyroMag-std() values
+ 		Numeric value in units of radians/second for angular velocity 
+
+averageOf.tBodyGyroJerkMagMean 
+ 	The average (for each subject and each activity) of the original tBodyGyroJerkMag-mean() values
+ 		Numeric value in units of radians/second for angular velocity 
+
+averageOf.tBodyGyroJerkMagStd 
+ 	The average (for each subject and each activity) of the original tBodyGyroJerkMag-std() values
+ 		Numeric value in units of radians/second for angular velocity 
+
+averageOf.fBodyAccMeanX 
+ 	The average (for each subject and each activity) of the original fBodyAcc-mean()-X values
+ 		Numeric value in standard gravity units 'g' 
+
+averageOf.fBodyAccMeanY 
+ 	The average (for each subject and each activity) of the original fBodyAcc-mean()-Y values
+ 		Numeric value in standard gravity units 'g' 
+
+averageOf.fBodyAccMeanZ 
+ 	The average (for each subject and each activity) of the original fBodyAcc-mean()-Z values
+ 		Numeric value in standard gravity units 'g' 
+
+averageOf.fBodyAccStdX 
+ 	The average (for each subject and each activity) of the original fBodyAcc-std()-X values
+ 		Numeric value in standard gravity units 'g' 
+
+averageOf.fBodyAccStdY 
+ 	The average (for each subject and each activity) of the original fBodyAcc-std()-Y values
+ 		Numeric value in standard gravity units 'g' 
+
+averageOf.fBodyAccStdZ 
+ 	The average (for each subject and each activity) of the original fBodyAcc-std()-Z values
+ 		Numeric value in standard gravity units 'g' 
+
+averageOf.fBodyAccJerkMeanX 
+ 	The average (for each subject and each activity) of the original fBodyAccJerk-mean()-X values
+ 		Numeric value in standard gravity units 'g' 
+
+averageOf.fBodyAccJerkMeanY 
+ 	The average (for each subject and each activity) of the original fBodyAccJerk-mean()-Y values
+ 		Numeric value in standard gravity units 'g' 
+
+averageOf.fBodyAccJerkMeanZ 
+ 	The average (for each subject and each activity) of the original fBodyAccJerk-mean()-Z values
+ 		Numeric value in standard gravity units 'g' 
+
+averageOf.fBodyAccJerkStdX 
+ 	The average (for each subject and each activity) of the original fBodyAccJerk-std()-X values
+ 		Numeric value in standard gravity units 'g' 
+
+averageOf.fBodyAccJerkStdY 
+ 	The average (for each subject and each activity) of the original fBodyAccJerk-std()-Y values
+ 		Numeric value in standard gravity units 'g' 
+
+averageOf.fBodyAccJerkStdZ 
+ 	The average (for each subject and each activity) of the original fBodyAccJerk-std()-Z values
+ 		Numeric value in standard gravity units 'g' 
+
+averageOf.fBodyGyroMeanX 
+ 	The average (for each subject and each activity) of the original fBodyGyro-mean()-X values
+ 		Numeric value in units of radians/second for angular velocity 
+
+averageOf.fBodyGyroMeanY 
+ 	The average (for each subject and each activity) of the original fBodyGyro-mean()-Y values
+ 		Numeric value in units of radians/second for angular velocity 
+
+averageOf.fBodyGyroMeanZ 
+ 	The average (for each subject and each activity) of the original fBodyGyro-mean()-Z values
+ 		Numeric value in units of radians/second for angular velocity 
+
+averageOf.fBodyGyroStdX 
+ 	The average (for each subject and each activity) of the original fBodyGyro-std()-X values
+ 		Numeric value in units of radians/second for angular velocity 
+
+averageOf.fBodyGyroStdY 
+ 	The average (for each subject and each activity) of the original fBodyGyro-std()-Y values
+ 		Numeric value in units of radians/second for angular velocity 
+
+averageOf.fBodyGyroStdZ 
+ 	The average (for each subject and each activity) of the original fBodyGyro-std()-Z values
+ 		Numeric value in units of radians/second for angular velocity 
+
+averageOf.fBodyAccMagMean 
+ 	The average (for each subject and each activity) of the original fBodyAccMag-mean() values
+ 		Numeric value in standard gravity units 'g' 
+
+averageOf.fBodyAccMagStd 
+ 	The average (for each subject and each activity) of the original fBodyAccMag-std() values
+ 		Numeric value in standard gravity units 'g' 
+
+averageOf.fBodyBodyAccJerkMagMean 
+ 	The average (for each subject and each activity) of the original fBodyBodyAccJerkMag-mean() values
+ 		Numeric value in standard gravity units 'g' 
+
+averageOf.fBodyBodyAccJerkMagStd 
+ 	The average (for each subject and each activity) of the original fBodyBodyAccJerkMag-std() values
+ 		Numeric value in standard gravity units 'g' 
+
+averageOf.fBodyBodyGyroMagMean 
+ 	The average (for each subject and each activity) of the original fBodyBodyGyroMag-mean() values
+ 		Numeric value in units of radians/second for angular velocity 
+
+averageOf.fBodyBodyGyroMagStd 
+ 	The average (for each subject and each activity) of the original fBodyBodyGyroMag-std() values
+ 		Numeric value in units of radians/second for angular velocity 
+
+averageOf.fBodyBodyGyroJerkMagMean 
+ 	The average (for each subject and each activity) of the original fBodyBodyGyroJerkMag-mean() values
+ 		Numeric value in units of radians/second for angular velocity 
+
+averageOf.fBodyBodyGyroJerkMagStd 
+ 	The average (for each subject and each activity) of the original fBodyBodyGyroJerkMag-std() values
+ 		Numeric value in units of radians/second for angular velocity 
+
