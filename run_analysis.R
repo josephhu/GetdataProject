@@ -202,9 +202,17 @@ rename.back <- function(name) {
 }
 
 gen.code.book <- function(name) {
+    if (grepl("Acc",name)) {
+        unit <- "in standard gravity units 'g'"
+    } else if (grepl("Gyro",name)) {
+        unit <- "in units of radians/second for angular velocity"
+    } else {
+        unit <- " (units unknown)"
+    }
+    
     cat(name,"\r\n", 
         "\tThe average (for each subject and each activity) of the original",rename.back(name),"values\r\n",
-        "\t\tNumeric value\r\n\r\n")
+        "\t\tNumeric value", unit, "\r\n\r\n")
 }
 
 gen.feature <- function(name) {
