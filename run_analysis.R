@@ -1,3 +1,5 @@
+# Determine if this system is capable of using the reshape2 or the plyr libraries
+#
 useReshape2 <- TRUE
 usePlyr <- TRUE
 
@@ -17,26 +19,33 @@ if (!require(plyr)) {
     }    
 }
 
-std.name <- function(name) {
+# run() is the main routine
+# It illustrates how the functions can be called in order to generate the tidy data set
+# 
+run <- function() {
     
-    # Implements R's (read.table) standard conversion of column names
-    # "tBodyAcc-mean()-X" becomes "tBodyAcc.mean...X"
-    #
-    gsub("[ \\(\\)-]", "\\.", name)
+    localFile <- "UCI HAR Dataset.zip"
+    if (!file.exists(localFile)) {
+        download.data()
+    }
+    
+    localDir <- unzip.data(localFile)
+    
+    merged <- merge.data(localDir)
+    extracted <- extract.mean.std(merged)
+    tidy <- gen.tidy.data(extracted)
+    tidy <- rename.columns(tidy)
+    
+    write.table(tidy, "UCI_HAR_TidyData.txt", row.names=FALSE)
+    
+    #l_ply(colnames(tidy)[-(1:2)],gen.code.book)
+    #l_ply(colnames(tidy)[-(1:2)],gen.feature)
+    
 }
 
-orig.name <- function(name) {
-    
-    # change "tBodyAcc.mean...X" to "tBodyAcc.mean().X"
-    t = gsub("(std|mean)\\.\\.", "\\1()", name)
-    
-    # change "tBodyAcc.mean().X" to "tBodyAcc.mean()-X"
-    t = gsub("\\.([XYZ])$", "-\\1", t)
-    
-    # change "tBodyAcc.mean()-X" to "tBodyAcc-mean()-X"
-    gsub("\\.", "-", t)
-}
-
+# download.data() downloads the original zip file to the working directory
+# if this file has not been dowloaded already
+# 
 download.data <- function(
     fileUrl="https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip",
     localFile="UCI HAR Dataset.zip") {
@@ -50,6 +59,9 @@ download.data <- function(
     localFile
 }
 
+# unzip.data() unzips the content of the zip file to a "data" subdirectory
+# The "data" subdirectory is created as necessary
+# 
 unzip.data <- function(
     localFile="UCI HAR Dataset.zip") {
 
@@ -79,6 +91,15 @@ unzip.data <- function(
     return( "./data/UCI HAR Dataset")
 }
 
+# merge.data() creates a big data frame by merging (using cbind() and rbind()) 
+# the files that contain
+# 1. the subject id's (subject_train/test.txt)
+# 2. the activity (y_train/test.txt)
+# 3. the measurements (X_train/test.txt)
+# 
+# The activity column's numeric values 1, 2, etc.. will be replaced with 
+# the activity labels WALKING, WALKING_UPSTAIRS, etc. (from the activity_labels.txt file)
+# 
 merge.data <- function(
     localDir="./data/UCI HAR Dataset") {
     
@@ -115,6 +136,10 @@ merge.data <- function(
     x
 }
 
+# extract.mean.std() works on the big data frame and extracts only 
+# the subject and activity columns (the primary keys of the data set)
+# and the "-mean()" and"-std()" columns (measurements that were the means and standard deviations)
+# 
 extract.mean.std <- function(x) {
     
     # only want the first 2 columns "subject" and "activity"
@@ -126,6 +151,9 @@ extract.mean.std <- function(x) {
     x[,grep("subject|activity|\\.mean\\.\\.|\\.std\\.\\.",names(x))]
 }
 
+# gen.tidy.data() computes the average (per subject and activity)
+# of the "-mean()" and "-std()" values
+# 
 gen.tidy.data <- function(x) {
     if (usePlyr & require(plyr)) {
         
@@ -146,6 +174,20 @@ gen.tidy.data <- function(x) {
     data
 }
 
+# rename.columns() illstrates one possible way to rename the data frame columns
+# with descriptive variable names.
+# 
+# Because of the length of the original names, we chose not to convert everything to lower cases
+# but rather we are using camel cases to make them clearer to read.
+# 
+# Also, the riginal data set had some sensible abbreviations (such as Gyro for Gyroscope)
+# and so we decided to keep these abbreviations.
+# 
+# The original feature name "tBodyAcc-mean()-X" is thus converted to "tBodyAccMeanX"
+# 
+# To emphasize that the tidy data set is the summaries (average of) of the original data,
+# the column name is further renamed as "averageOf.tBodyAccMeanX" to clearly distinguish it. 
+# 
 rename.columns <- function(df) {
     
     # R (read.table) converted column name "tBodyAcc-mean()-X"
@@ -170,27 +212,6 @@ rename.columns <- function(df) {
     names(df) <- new.names    
     
     df
-}
-
-run <- function() {
-    
-    localFile <- "UCI HAR Dataset.zip"
-    if (!file.exists(localFile)) {
-        download.data()
-    }
-
-    localDir <- unzip.data(localFile)
-    
-    merged <- merge.data(localDir)
-    extracted <- extract.mean.std(merged)
-    tidy <- gen.tidy.data(extracted)
-    tidy <- rename.columns(tidy)
-    
-    write.table(tidy, "UCI_HAR_TidyData.txt", row.names=FALSE)
-    
-    #l_ply(colnames(tidy)[-(1:2)],gen.code.book)
-    #l_ply(colnames(tidy)[-(1:2)],gen.feature)
-    
 }
 
 rename.back <- function(name) {
@@ -219,3 +240,22 @@ gen.feature <- function(name) {
     cat(name,rep_len(" ",40-nchar(name)),"# average of ",rename.back(name),"\r\n",sep="")
 }
 
+std.name <- function(name) {
+    
+    # Implements R's (read.table) standard conversion of column names
+    # "tBodyAcc-mean()-X" becomes "tBodyAcc.mean...X"
+    #
+    gsub("[ \\(\\)-]", "\\.", name)
+}
+
+orig.name <- function(name) {
+    
+    # change "tBodyAcc.mean...X" to "tBodyAcc.mean().X"
+    t = gsub("(std|mean)\\.\\.", "\\1()", name)
+    
+    # change "tBodyAcc.mean().X" to "tBodyAcc.mean()-X"
+    t = gsub("\\.([XYZ])$", "-\\1", t)
+    
+    # change "tBodyAcc.mean()-X" to "tBodyAcc-mean()-X"
+    gsub("\\.", "-", t)
+}
