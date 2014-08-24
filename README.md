@@ -49,7 +49,7 @@ of the measurements that were the mean and standard deviation of the original si
 
 We define "mean" as column names that contain "-mean()" and standard deviation as column names that contain "-std()".
 Note that the original features_info.txt listed "meanFreq()" as "Weighted average of the frequency components to obtain a mean frequency" 
-so based on this information, we did not include "-maenFreq()" columns.
+so based on this information, we did not include "-meanFreq()" columns.
 
 Note the tidy data set file was created in R by: 
 `write.table(data.frame, "UCI_HAR_TidyData.txt", row.names=FALSE)`
@@ -66,8 +66,8 @@ Similar to the original raw data set, a featues.txt file lists all the columns o
 
 ### The Recipe
 
-The [R script](https://github.com/josephhu/GetdataProject/blob/master/run_analysis.R) contains all the R functions used to generate the Tidy Data Set.
-It should be run in R by source("run_analysis.R") and then run()
+The [R script "run_analysis.R"](https://github.com/josephhu/GetdataProject/blob/master/run_analysis.R) contains all the R functions used to generate the Tidy Data Set.
+It should be executed in R by source("run_analysis.R") and then run()
 
 * run() is the main routine
 * download.data() downloads the original zip file to the working directory
@@ -77,7 +77,15 @@ It should be run in R by source("run_analysis.R") and then run()
 * gen.tidy.data() computes the average (per subject and activity) of the "-mean()" and "-std()" values
 * rename.columns() renames the tidy data set with descriptive variable names.
 
-The project intruction calls for "descriptive activity names to name the activities in the data set" so the activity values of 1, 2, etc. are converted to strings WALKING, WALKING_UPSTAIRS, etc.
+Detailed descriptions for each function are in the R script comments. 
+
+gen.tidy.set() uses 3 different approaches to calculate the average of each measurements.
+
+* melt()/dcast() from the reshape2 library
+* ddply() with colwise from the plyr library
+* aggegate from base R
+
+The project instruction calls for "descriptive activity names to name the activities in the data set" so the activity values of 1, 2, etc. are converted to strings WALKING, WALKING_UPSTAIRS, etc.
 
 Because of the length of the original names, we chose not to convert everything to lower cases but rather we are using camel cases to make them clearer to read.
 Also, the riginal data set had some sensible abbreviations (such as Gyro for Gyroscope) and so we decided to keep these abbreviations.
