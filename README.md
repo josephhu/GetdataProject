@@ -47,6 +47,13 @@ of the measurements that were the mean and standard deviation of the original si
 
 We define "mean" as column names that contain "-mean()" and standard deviation as column names that contain "-std()".
 
+Note the tidy data set file was created in R by: 
+`write.table(data.frame, "UCI_HAR_TidyData.txt", row.names=FALSE)`
+
+So the original data frame can be recreated in R as:
+`data.frame <- read.table("UCI_HAR_TidyData.txt", header=TRUE)`
+
+
 ### The Code Book
 
 The [Code Book](https://github.com/josephhu/GetdataProject/blob/master/UCI_HAR_CodeBook.txt) describes each variable, its values and units.
