@@ -83,7 +83,7 @@ gen.tidy.set() uses 3 different approaches to calculate the average of each meas
 
 * melt()/dcast() from the reshape2 library
 * ddply() with colwise from the plyr library
-* aggegate from base R
+* aggregate() from base R
 
 The project instruction calls for "descriptive activity names to name the activities in the data set" so the activity values of 1, 2, etc. are converted to strings WALKING, WALKING_UPSTAIRS, etc.
 
