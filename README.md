@@ -66,7 +66,7 @@ It should be run in R by source("run_analysis.R") and then run()
 * gen.tidy.data() computes the average (per subject and activity) of the "-mean()" and "-std()" values
 * rename.columns() renames the tidy data set with descriptive variable names.
 
-The project intruction calls for "descriptive activity names to name the activities in the data set" so the ativity values of 1, 2, etc. are converted to strings WALKING, WALKING_UPSTAIRS, etc.
+The project intruction calls for "descriptive activity names to name the activities in the data set" so the activity values of 1, 2, etc. are converted to strings WALKING, WALKING_UPSTAIRS, etc.
 
 Because of the length of the original names, we chose not to convert everything to lower cases but rather we are using camel cases to make them clearer to read.
 Also, the riginal data set had some sensible abbreviations (such as Gyro for Gyroscope) and so we decided to keep these abbreviations.
