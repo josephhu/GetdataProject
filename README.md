@@ -48,6 +48,8 @@ The [Tidy Data Set](https://github.com/josephhu/GetdataProject/blob/master/UCI_H
 of the measurements that were the mean and standard deviation of the original signals.
 
 We define "mean" as column names that contain "-mean()" and standard deviation as column names that contain "-std()".
+Note that the original features_info.txt listed "meanFreq()" as "Weighted average of the frequency components to obtain a mean frequency" 
+so based on this information, we did not include "-maenFreq()" columns.
 
 Note the tidy data set file was created in R by: 
 `write.table(data.frame, "UCI_HAR_TidyData.txt", row.names=FALSE)`
