@@ -31,7 +31,9 @@ The obtained dataset has been randomly partitioned into two sets, where 70% of t
 The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain. See 'features_info.txt' for more details. 
 
 The raw data had separated the 30 subjects into training and test sets.
+
 With each set, the data were further separated into 
+
 1. subject_train/test.txt that had only the subject id's (from 1 to 30)
 2. y_train/test.txt that had the activity values (from 1 to 6)
 3. X_train/test.txt that had 561 column of measurements.
