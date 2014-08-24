@@ -36,7 +36,7 @@ With each set, the data were further separated into
 
 1. subject_train/test.txt that had only the subject id's (from 1 to 30)
 2. y_train/test.txt that had the activity values (from 1 to 6)
-3. X_train/test.txt that had 561 column of measurements.
+3. X_train/test.txt that had 561 columns of measurements.
 
 activity_labels.txt contain the names of the 6 activities.
 features.txt contain the names of the 561 measurements.
