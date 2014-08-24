@@ -34,7 +34,7 @@ fBodyAccJerkMag
 fBodyGyroMag
 fBodyGyroJerkMag
 
-Mean is the abbreviation for maen value.
+Mean is the abbreviation for mean value.
 Std is the abbreviation for Standard Deviation value.
 
 '[XYZ]' is used to denote 3-axial signals in the X, Y and Z directions.
